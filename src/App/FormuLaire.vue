@@ -9,6 +9,8 @@
         :model="render.model"
         :class-css="['mb-5']"
         namespace-store=""
+        @addNewValue="addNewValue($event, render)"
+        @removeField="removeField($event, render)"
       ></component>
     </b-form>
   </div>
@@ -88,6 +90,12 @@ export default {
         });
       }
       return fields;
+    },
+    addNewValue(value, render) {
+      this.model[render.field.name].push(value);
+    },
+    removeField(index, render) {
+      this.model[render.field.name].splice(index, 1);
     },
   },
 };
