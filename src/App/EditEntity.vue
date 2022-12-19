@@ -58,7 +58,6 @@ export default {
               even.detail.id != this.currentEntityInfo.id
             ) {
               this.$store.dispatch("cleanDatas").then(() => {
-                console.log("data is clean");
                 this.initEdit(even);
               });
             } else this.initEdit(even);
