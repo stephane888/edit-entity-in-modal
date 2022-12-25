@@ -11,6 +11,7 @@
         namespace-store=""
         @addNewValue="addNewValue($event, render)"
         @removeField="removeField($event, render)"
+        @array_move="array_move($event, render)"
       ></component>
     </b-form>
   </div>
@@ -96,6 +97,22 @@ export default {
     },
     removeField(index, render) {
       this.model[render.field.name].splice(index, 1);
+    },
+    array_move(evt, render) {
+      const moveItem = (arr, fromIndex, toIndex) => {
+        let itemRemoved = arr.splice(fromIndex, 1); // assign the removed item as an array
+        arr.splice(toIndex, 0, itemRemoved[0]); // insert itemRemoved into the target index
+        return arr;
+      };
+      const vals = moveItem(
+        this.model[render.field.name],
+        evt.oldIndex,
+        evt.newIndex
+      );
+      this.$store.dispatch("setValue", {
+        value: vals,
+        fieldName: render.field.name,
+      });
     },
   },
 };
