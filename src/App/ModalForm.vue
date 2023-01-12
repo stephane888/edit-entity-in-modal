@@ -66,7 +66,9 @@ export default {
     },
   },
   methods: {
-    handleOk() {
+    handleOk(event) {
+      event.preventDefault();
+      // alert("F2");
       this.$refs.formEdit
         .submit()
         .then(() => {

@@ -67,6 +67,7 @@ export default {
       );
     },
     initEdit(even) {
+      console.log("initEdit : ", even.detail);
       this.openModal();
       this.$store.dispatch("set_currentEntityForm", even.detail).then(() => {
         this.$store.dispatch("loadForm");

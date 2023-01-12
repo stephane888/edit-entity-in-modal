@@ -24,6 +24,7 @@
 </template>
 
 <script>
+import request from "@/request";
 import loadField from "components_h_vuejs/src/components/fieldsDrupal/loadField";
 export default {
   name: "TestCkeditor",
@@ -489,7 +490,7 @@ export default {
   methods: {
     buildFields() {
       const fields = [];
-      //loadField.getConfig(request);
+      loadField.setConfig(request);
       if (this.form_sort)
         this.form_sort.forEach((field) => {
           fields.push({

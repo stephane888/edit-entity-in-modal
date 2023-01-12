@@ -1,18 +1,29 @@
 <template>
   <div>
-    <b-form v-if="show" @submit="onSubmit" @reset="onReset">
+    <b-form v-if="show" @submit.prevent="onSubmit" @reset="onReset">
       <component
-        :is="render.template"
-        v-for="(render, k) in buildFields()"
-        :key="k"
-        :field="render.field"
-        :model="render.model"
-        :class-css="['mb-5']"
-        namespace-store=""
-        @addNewValue="addNewValue($event, render)"
-        @removeField="removeField($event, render)"
-        @array_move="array_move($event, render)"
-      ></component>
+        :is="container.template"
+        v-for="(container, i) in buildFields()"
+        :key="i"
+        :entity="container.entity"
+        :class-entity="['pt-1']"
+      >
+        <component
+          :is="render.template"
+          v-for="(render, k) in container.fields"
+          :key="k"
+          :field="render.field"
+          :model="render.model"
+          :entities="render.entities"
+          :class-css="['mb-5']"
+          :parent-name="i + '.entity.'"
+          :parent-child-name="i + '.entities.'"
+          namespace-store=""
+          @addNewValue="addNewValue($event, render)"
+          @removeField="removeField($event, render)"
+          @array_move="array_move($event, render)"
+        ></component>
+      </component>
     </b-form>
   </div>
 </template>
@@ -20,7 +31,9 @@
 <script>
 import request from "../request";
 import { mapState } from "vuex";
+import generateField from "components_h_vuejs/src/js/FormUttilities";
 import loadField from "components_h_vuejs/src/components/fieldsDrupal/loadField";
+
 export default {
   props: {
     showSubmit: {
@@ -35,8 +48,7 @@ export default {
   },
   computed: {
     ...mapState({
-      form: (state) => state.currentEntityForm.form,
-      model: (state) => state.currentEntityForm.model,
+      currentEntityForm: (state) => state.currentEntityForm,
     }),
     idEntity() {
       if (this.form.label !== "") {
@@ -46,31 +58,25 @@ export default {
       } else return "";
     },
   },
-  mounted() {
-    loadField.getConfig(request);
-  },
+
   methods: {
     /**
      * @private
      * @param {*} event
      */
     onSubmit(event) {
-      event.preventDefault();
       this.submit();
     },
     /**
      * @public
      */
     submit() {
-      return this.$store.dispatch("saveEntity");
+      return this.$store.dispatch("saveEntities");
     },
     onReset(event) {
       event.preventDefault();
       // Reset our form values
-      this.form.id = "";
-      this.form.label = "";
-      this.form.description = "";
-      this.form.users = [];
+      // ...
       // Trick to reset/clear native browser form validation state
       this.show = false;
       this.$nextTick(() => {
@@ -78,17 +84,15 @@ export default {
       });
     },
     setId(id) {
-      // Si l'uuid n'existe, alors c'est une creation de type, on peut generer l'id.
+      // Si l'uuid n'existe pas, alors c'est une creation de type, on peut generer l'id.
       if (!this.form.uuid) this.form.id = id;
     },
     buildFields() {
-      const fields = [];
-      for (const i in this.form) {
-        fields.push({
-          template: loadField.getField(this.form[i]),
-          field: this.form[i],
-          model: this.model,
-        });
+      var fields = [];
+      loadField.setConfig(request);
+      console.log("this.currentEntityForm  :", this.currentEntityForm);
+      if (this.currentEntityForm.length) {
+        fields = generateField.generateFields(this.currentEntityForm, fields);
       }
       return fields;
     },
