@@ -7,6 +7,7 @@
     size="lg"
     footer-bg-variant="light"
     header-bg-variant="light"
+    body-class="edit-entity-in-modal"
     :hide-footer="false"
     :no-close-on-backdrop="false"
     @ok="handleOk"
@@ -83,3 +84,14 @@ export default {
   },
 };
 </script>
+<style lang="scss">
+.edit-entity-in-modal {
+  form {
+    .form-group {
+      legend {
+        font-weight: 600;
+      }
+    }
+  }
+}
+</style>

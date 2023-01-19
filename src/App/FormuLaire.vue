@@ -90,7 +90,7 @@ export default {
     buildFields() {
       var fields = [];
       loadField.setConfig(request);
-      console.log("this.currentEntityForm  :", this.currentEntityForm);
+      console.log(" this.currentEntityForm  :", this.currentEntityForm);
       if (this.currentEntityForm.length) {
         fields = generateField.generateFields(this.currentEntityForm, fields);
       }
