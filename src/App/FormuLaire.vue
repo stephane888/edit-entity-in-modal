@@ -1,9 +1,43 @@
 <template>
   <div>
+    <div>
+      <b-alert
+        class="building-fields d-flex align-items-center"
+        :variant="'info'"
+        fade
+        :show="building_fields"
+      >
+        <h3 class="d-flex align-items-center mb-0 ml-0 mr-auto">
+          Construction du formulaire encours
+        </h3>
+        <b-icon
+          icon="three-dots"
+          animation="cylon"
+          font-scale="4"
+          class="ml-5"
+        ></b-icon>
+      </b-alert>
+      <b-alert
+        class="building-fields d-flex align-items-center"
+        :variant="'primary'"
+        fade
+        :show="running"
+      >
+        <h3 class="d-flex align-items-center mb-0 ml-0 mr-auto">
+          Encours d'execution
+        </h3>
+        <b-icon
+          icon="three-dots"
+          animation="cylon"
+          font-scale="4"
+          class="ml-5"
+        ></b-icon>
+      </b-alert>
+    </div>
     <b-form v-if="show" @submit.prevent="onSubmit" @reset="onReset">
       <component
         :is="container.template"
-        v-for="(container, i) in buildFields()"
+        v-for="(container, i) in fields"
         :key="i"
         :entity="container.entity"
         :class-entity="['pt-1']"
@@ -31,10 +65,9 @@
 <script>
 import request from "../request";
 import { mapState } from "vuex";
-import generateField from "components_h_vuejs/src/js/FormUttilities";
-import loadField from "components_h_vuejs/src/components/fieldsDrupal/loadField";
 
 export default {
+  name: "FormuLaire",
   props: {
     showSubmit: {
       type: Boolean,
@@ -48,7 +81,9 @@ export default {
   },
   computed: {
     ...mapState({
-      currentEntityForm: (state) => state.currentEntityForm,
+      fields: (state) => state.fields,
+      building_fields: (state) => state.building_fields,
+      running: (state) => state.running,
     }),
     idEntity() {
       if (this.form.label !== "") {
@@ -64,7 +99,7 @@ export default {
      * @private
      * @param {*} event
      */
-    onSubmit(event) {
+    onSubmit() {
       this.submit();
     },
     /**
@@ -86,15 +121,6 @@ export default {
     setId(id) {
       // Si l'uuid n'existe pas, alors c'est une creation de type, on peut generer l'id.
       if (!this.form.uuid) this.form.id = id;
-    },
-    buildFields() {
-      var fields = [];
-      loadField.setConfig(request);
-      console.log(" this.currentEntityForm  :", this.currentEntityForm);
-      if (this.currentEntityForm.length) {
-        fields = generateField.generateFields(this.currentEntityForm, fields);
-      }
-      return fields;
     },
     addNewValue(value, render) {
       this.model[render.field.name].push(value);

@@ -52,15 +52,19 @@ export default {
         "formatage_models_data_quick_edit_vuejs",
         (even) => {
           if (even.detail && even.detail.id) {
-            // on verifie s'il faut netoyer les données.
+            // On verifie s'il faut netoyer les données.
             if (
               this.currentEntityInfo.id &&
               even.detail.id != this.currentEntityInfo.id
             ) {
+              console.log(" check_edit_entity Nettoyage ");
               this.$store.dispatch("cleanDatas").then(() => {
                 this.initEdit(even);
               });
-            } else this.initEdit(even);
+            } else {
+              console.log(" check_edit_entity faux ");
+              this.initEdit(even);
+            }
           }
         },
         false
