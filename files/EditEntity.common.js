@@ -5894,8 +5894,15 @@ __webpack_require__(7888);
     CKEDITOR.dtd.$removeEmpty.i = 0;
     CKEDITOR.dtd.$removeEmpty.label = 0;
     // quickuploader
-    const date = new Date();
-    CKEDITOR.plugins.addExternal("quickuploader", _fieldsDrupal_loadField__WEBPACK_IMPORTED_MODULE_0__/* ["default"].config.getBaseUrl */ .Z.config.getBaseUrl() + "/libraries/quickuploader/plugin.js?v=" + date.getTime());
+    // Pas necessaire on a opté d'ajouter le module dans ckeditor au niveau du theme wb-universe/ckeditor.
+    // const date = new Date();
+    // CKEDITOR.plugins.addExternal(
+    //   "quickuploader",
+    //   request.config.getBaseUrl() +
+    //     "/libraries/quickuploader/plugin.js?v=" +
+    //     date.getTime()
+    // );
+    // humm.
     if (_fieldsDrupal_loadField__WEBPACK_IMPORTED_MODULE_0__/* ["default"].config */ .Z.config) CKEDITOR.config.quickuploaderUploadUrl = _fieldsDrupal_loadField__WEBPACK_IMPORTED_MODULE_0__/* ["default"].config.getBaseUrl */ .Z.config.getBaseUrl();
   },
   // Le parent surchargera cette partie enfin de fournir ces styles.
