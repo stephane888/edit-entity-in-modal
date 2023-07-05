@@ -58,8 +58,8 @@ var staticRenderFns = [];
 var es_array_push = __webpack_require__(6352);
 // EXTERNAL MODULE: ../drupal-vuejs/src/App/jsonApi/itemsEntity.js
 var itemsEntity = __webpack_require__(1139);
-// EXTERNAL MODULE: ../components_bootstrapvuejs/src/components/fieldsDrupal/loadField.js + 132 modules
-var loadField = __webpack_require__(859);
+// EXTERNAL MODULE: ../components_bootstrapvuejs/src/components/fieldsDrupal/loadField.js + 136 modules
+var loadField = __webpack_require__(6871);
 ;// CONCATENATED MODULE: ./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib/index.js??clonedRuleSet-82.use[1]!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!../components_bootstrapvuejs/src/components/Ressouces/OptionsEntities.vue?vue&type=script&lang=js&
 
 
@@ -191,14 +191,20 @@ class itemsEntity {
       // };
       if (config.TestDomain) _utilities_js__WEBPACK_IMPORTED_MODULE_1__/* ["default"].TestDomain */ .Z.TestDomain = config.TestDomain;
     }
+    /**
+     * Permet de joindre les multiples filtres.
+     */
+    this.filterQuery = "";
   }
   /**
    * Recupere les items en passant par le token.
-   * ( ce cas de figure correspond à une application qui est sur le meme domaine ).
    */
   get() {
     return new Promise(resolv => {
-      _utilities_js__WEBPACK_IMPORTED_MODULE_1__/* ["default"].dGet */ .Z.dGet(this.url, _Confs_js__WEBPACK_IMPORTED_MODULE_2__/* ["default"].headers */ .Z.headers).then(resp => {
+      if (this.filterQuery) {
+        this.filterQuery = this.url.includes("?") ? "&" + this.filterQuery : "?" + this.filterQuery;
+      }
+      _utilities_js__WEBPACK_IMPORTED_MODULE_1__/* ["default"].dGet */ .Z.dGet(this.url + this.filterQuery, _Confs_js__WEBPACK_IMPORTED_MODULE_2__/* ["default"].headers */ .Z.headers).then(resp => {
         this.items = resp.data;
         resolv(resp.data);
       });
@@ -206,6 +212,7 @@ class itemsEntity {
   }
   /**
    * Recupere les items
+   * ( on doit pouvoir faire un search avec d'autres filtre )
    */
   getSearch(search) {
     const filter = new _buildFilter_js__WEBPACK_IMPORTED_MODULE_3__/* ["default"] */ .Z();
@@ -254,13 +261,19 @@ class itemsEntity {
    */
   getValueById(id) {
     const filter = new _buildFilter_js__WEBPACK_IMPORTED_MODULE_3__/* ["default"] */ .Z();
-    let fieldId = "id";
+    let fieldId = "drupal_internal__id";
     switch (this.entity_type_id) {
       case "user":
         fieldId = "uid";
         break;
-      case "domain":
-        fieldId = "drupal_internal__id";
+      // case "domain":
+      //   fieldId = "drupal_internal__id";
+      //   break;
+      case "node":
+        fieldId = "drupal_internal__nid";
+        break;
+      case "taxonomy_term":
+        fieldId = "tid";
         break;
     }
     filter.addFilter(fieldId, "=", id);
@@ -270,6 +283,18 @@ class itemsEntity {
         resolv(resp.data);
       });
     });
+  }
+
+  /**
+   * @see https://www.drupal.org/docs/core-modules-and-themes/core-modules/jsonapi-module/filtering
+   * @param {*} field_name
+   * @param {*} operator
+   * @param {*} value
+   */
+  filter(field_name, operator, value) {
+    const filter = new _buildFilter_js__WEBPACK_IMPORTED_MODULE_3__/* ["default"] */ .Z();
+    filter.addFilter(field_name, operator, value);
+    if (filter.query) this.filterQuery += filter.query;
   }
   /**
    * Les entities à joindre dans la requete.
