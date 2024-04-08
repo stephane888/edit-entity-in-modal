@@ -1,7 +1,7 @@
 "use strict";
-((typeof self !== 'undefined' ? self : this)["webpackChunkEditEntity"] = (typeof self !== 'undefined' ? self : this)["webpackChunkEditEntity"] || []).push([[216],{
+((typeof self !== 'undefined' ? self : this)["webpackChunkEditEntity"] = (typeof self !== 'undefined' ? self : this)["webpackChunkEditEntity"] || []).push([[131],{
 
-/***/ 6216:
+/***/ 4131:
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 // ESM COMPAT FLAG
@@ -12,7 +12,7 @@ __webpack_require__.d(__webpack_exports__, {
   "default": function() { return /* binding */ MultiSelectTaxo; }
 });
 
-;// CONCATENATED MODULE: ./node_modules/babel-loader/lib/index.js??clonedRuleSet-82.use[1]!./node_modules/@vue/vue-loader-v15/lib/loaders/templateLoader.js??ruleSet[1].rules[3]!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!../components_bootstrapvuejs/src/components/Ressouces/MultiSelectTaxo.vue?vue&type=template&id=dfd50854&
+;// CONCATENATED MODULE: ./node_modules/babel-loader/lib/index.js??clonedRuleSet-82.use[1]!./node_modules/@vue/vue-loader-v15/lib/loaders/templateLoader.js??ruleSet[1].rules[3]!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!../components_bootstrapvuejs/src/components/Ressouces/MultiSelectTaxo.vue?vue&type=template&id=a0109916&
 var render = function render() {
   var _vm = this,
     _c = _vm._self._c;
@@ -35,6 +35,7 @@ var render = function render() {
           attrs: {
             "options": _vm.options,
             "custom-label": _vm.nameWithLang,
+            "taggable": true,
             "placeholder": "",
             "label": "text",
             "track-by": "text",
@@ -45,7 +46,8 @@ var render = function render() {
             "allow-empty": true
           },
           on: {
-            "search-change": _vm.asyncFind
+            "search-change": _vm.asyncFind,
+            "tag": _vm.createElement
           },
           model: {
             value: _vm.value_computed,
@@ -216,6 +218,13 @@ var loadField = __webpack_require__(4213);
     },
     /**
      *
+     * @param {*} newElement
+     */
+    createElement(newElement) {
+      console.log("nouveau: ", newElement);
+    },
+    /**
+     *
      * @param {*} search
      */
     asyncFind(search, init = false) {
@@ -304,4 +313,4 @@ var component = (0,componentNormalizer/* default */.Z)(
 /***/ })
 
 }]);
-//# sourceMappingURL=EditEntity.umd.216.js.map
+//# sourceMappingURL=EditEntity.umd.131.js.map

@@ -1,7 +1,7 @@
 "use strict";
-((typeof self !== 'undefined' ? self : this)["webpackChunkEditEntity"] = (typeof self !== 'undefined' ? self : this)["webpackChunkEditEntity"] || []).push([[636],{
+((typeof self !== 'undefined' ? self : this)["webpackChunkEditEntity"] = (typeof self !== 'undefined' ? self : this)["webpackChunkEditEntity"] || []).push([[882],{
 
-/***/ 636:
+/***/ 1882:
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 // ESM COMPAT FLAG
@@ -12,7 +12,7 @@ __webpack_require__.d(__webpack_exports__, {
   "default": function() { return /* binding */ MultiSelectEntities; }
 });
 
-;// CONCATENATED MODULE: ./node_modules/babel-loader/lib/index.js??clonedRuleSet-82.use[1]!./node_modules/@vue/vue-loader-v15/lib/loaders/templateLoader.js??ruleSet[1].rules[3]!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!../components_bootstrapvuejs/src/components/Ressouces/MultiSelectEntities.vue?vue&type=template&id=30a0e198&
+;// CONCATENATED MODULE: ./node_modules/babel-loader/lib/index.js??clonedRuleSet-82.use[1]!./node_modules/@vue/vue-loader-v15/lib/loaders/templateLoader.js??ruleSet[1].rules[3]!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!../components_bootstrapvuejs/src/components/Ressouces/MultiSelectEntities.vue?vue&type=template&id=2bdfb9cf&
 var render = function render() {
   var _vm = this,
     _c = _vm._self._c;
@@ -41,13 +41,15 @@ var render = function render() {
             "label": "text",
             "track-by": "text",
             "show-no-results": true,
+            "taggable": true,
             "show-labels": false,
             "loading": _vm.isLoading,
             "multiple": _vm.cardinality,
             "allow-empty": true
           },
           on: {
-            "search-change": _vm.asyncFind
+            "search-change": _vm.asyncFind,
+            "tag": _vm.createElement
           },
           model: {
             value: _vm.value_computed,
@@ -259,6 +261,13 @@ var loadField = __webpack_require__(4213);
           });
         }
       }
+    },
+    /**
+     *
+     * @param {*} newElement
+     */
+    createElement(newElement) {
+      console.log("nouveau: ", newElement);
     },
     /**
      * cette fonction est utiliser pour mettre à jour les données dans l'entité.
@@ -545,4 +554,4 @@ class itemsEntity {
 /***/ })
 
 }]);
-//# sourceMappingURL=EditEntity.umd.636.js.map
+//# sourceMappingURL=EditEntity.umd.882.js.map

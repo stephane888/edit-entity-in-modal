@@ -10326,8 +10326,8 @@ var MultiSelectvue_type_template_id_03a152cd_staticRenderFns = [];
 /* harmony default export */ var MultiSelectvue_type_script_lang_js_ = ({
   name: "MultiSelect",
   components: {
-    MultiSelectTaxo: () => __webpack_require__.e(/* import() */ 940).then(__webpack_require__.bind(__webpack_require__, 8940)),
-    MultiSelectEntities: () => __webpack_require__.e(/* import() */ 374).then(__webpack_require__.bind(__webpack_require__, 7374))
+    MultiSelectTaxo: () => __webpack_require__.e(/* import() */ 159).then(__webpack_require__.bind(__webpack_require__, 6159)),
+    MultiSelectEntities: () => __webpack_require__.e(/* import() */ 855).then(__webpack_require__.bind(__webpack_require__, 7855))
   },
   props: {
     classCss: {
