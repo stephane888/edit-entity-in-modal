@@ -10,7 +10,7 @@
     "Prod": "vue-cli-service build --mode production  --dest files --target lib --name EditEntity 'src/AppCmpts.js'"
   },
   "dependencies": {
-    "@stephane888/wbu-atomique": "file:../wbu-atomique",
+    "@stephane888/wbu-atomique": "github:stephane888/wbu-atomique#1x",
     "bootstrap": "^4.6.2",
     "bootstrap-vue": "^2.23.1",
     "components_h_vuejs": "file:../components_bootstrapvuejs",
