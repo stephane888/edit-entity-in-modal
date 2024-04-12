@@ -153,7 +153,7 @@ export default new Vuex.Store({
         commit("ACTIVE_RUNNING");
         if (payload.entity_type_id == undefined || !payload.entity_type_id) {
           reject("Paramettre manquant");
-        } else
+        } else {
           request
             .bPost(
               "/apivuejs/save-entity/" + payload.entity_type_id,
@@ -169,6 +169,7 @@ export default new Vuex.Store({
             .catch((er) => {
               reject(er);
             });
+        }
       });
     },
     cleanDatas({ commit }) {

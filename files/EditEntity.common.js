@@ -34707,15 +34707,17 @@ external_commonjs_vue_commonjs2_vue_root_Vue_default().use(vuex_esm);
         commit("ACTIVE_RUNNING");
         if (payload.entity_type_id == undefined || !payload.entity_type_id) {
           reject("Paramettre manquant");
-        } else request.bPost("/apivuejs/save-entity/" + payload.entity_type_id, payload.value).then(resp => {
-          console.log("resp : ", resp);
-          // setTimeout(() => {
-          console.log(" payload : ", payload);
-          resolv(resp);
-          // }, 1000);
-        }).catch(er => {
-          reject(er);
-        });
+        } else {
+          request.bPost("/apivuejs/save-entity/" + payload.entity_type_id, payload.value).then(resp => {
+            console.log("resp : ", resp);
+            // setTimeout(() => {
+            console.log(" payload : ", payload);
+            resolv(resp);
+            // }, 1000);
+          }).catch(er => {
+            reject(er);
+          });
+        }
       });
     },
     cleanDatas({
