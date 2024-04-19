@@ -5,7 +5,7 @@ import store from "./store";
 /**
  * On desactive le retour car ce dernier ajoute #/editentity sur les URLS.
  */
-//import router from "./router";
+// import router from "./router";
 // import bootstrap.
 import "./plugins/AppCmpts.js";
 Vue.config.productionTip = false;
