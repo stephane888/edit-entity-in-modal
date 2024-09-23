@@ -1,7 +1,7 @@
 "use strict";
-((typeof self !== 'undefined' ? self : this)["webpackChunkEditEntity"] = (typeof self !== 'undefined' ? self : this)["webpackChunkEditEntity"] || []).push([[797],{
+((typeof self !== 'undefined' ? self : this)["webpackChunkEditEntity"] = (typeof self !== 'undefined' ? self : this)["webpackChunkEditEntity"] || []).push([[694],{
 
-/***/ 1797:
+/***/ 2694:
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 // ESM COMPAT FLAG
@@ -12,13 +12,11 @@ __webpack_require__.d(__webpack_exports__, {
   "default": function() { return /* binding */ OptionsAllowedValues; }
 });
 
-;// CONCATENATED MODULE: ./node_modules/babel-loader/lib/index.js??clonedRuleSet-82.use[1]!./node_modules/@vue/vue-loader-v15/lib/loaders/templateLoader.js??ruleSet[1].rules[3]!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!../components_bootstrapvuejs/src/components/Ressouces/OptionsAllowedValues.vue?vue&type=template&id=6505b50f
+;// CONCATENATED MODULE: ./node_modules/babel-loader/lib/index.js??clonedRuleSet-82.use[1]!./node_modules/@vue/vue-loader-v15/lib/loaders/templateLoader.js??ruleSet[1].rules[3]!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!../components_bootstrapvuejs/src/components/Ressouces/OptionsAllowedValues.vue?vue&type=template&id=4770b34b
 var render = function render() {
   var _vm = this,
     _c = _vm._self._c;
-  return _c('div', [_c('div', {
-    staticClass: "d-none for-test"
-  }, [_vm._v("options value : " + _vm._s(_vm.field.type))]), _c('ValidationProvider', {
+  return _c('div', [_c('ValidationProvider', {
     attrs: {
       "name": _vm.fullname,
       "rules": _vm.getRules()
@@ -72,7 +70,7 @@ var staticRenderFns = [];
 // EXTERNAL MODULE: ../components_bootstrapvuejs/node_modules/core-js/modules/es.array.push.js
 var es_array_push = __webpack_require__(3518);
 // EXTERNAL MODULE: ../components_bootstrapvuejs/src/components/fieldsDrupal/loadField.js + 138 modules
-var loadField = __webpack_require__(667);
+var loadField = __webpack_require__(439);
 ;// CONCATENATED MODULE: ./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib/index.js??clonedRuleSet-82.use[1]!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!../components_bootstrapvuejs/src/components/Ressouces/OptionsAllowedValues.vue?vue&type=script&lang=js
 
 
@@ -188,4 +186,4 @@ var component = (0,componentNormalizer/* default */.A)(
 /***/ })
 
 }]);
-//# sourceMappingURL=EditEntity.umd.797.js.map
+//# sourceMappingURL=EditEntity.umd.694.js.map

@@ -1,10 +1,6 @@
 <template>
   <div>
-    <modalForm
-      :title-modal="titleModal"
-      :manage-modal="manageModal"
-      @closeModal="closeModal"
-    >
+    <modalForm :title-modal="titleModal" :manage-modal="manageModal" @closeModal="closeModal">
       <template #header>
         <HCardIcon :with-mb="false">
           <template #titre>
@@ -50,7 +46,7 @@ export default {
      * on force cette solution.
      */
     this.$root.$on("bv::modal::show", (bvEvent, modalId) => {
-      console.log("Modal is about to be shown", bvEvent, modalId);
+      // console.log("Modal is about to be shown", bvEvent, modalId);
       setTimeout(() => {
         const modal = document.getElementById(modalId);
         if (modal) {
@@ -66,10 +62,7 @@ export default {
         (even) => {
           if (even.detail && even.detail.id) {
             // On verifie s'il faut netoyer les données.
-            if (
-              this.currentEntityInfo.id &&
-              even.detail.id != this.currentEntityInfo.id
-            ) {
+            if (this.currentEntityInfo.id && even.detail.id != this.currentEntityInfo.id) {
               console.log(" check_edit_entity Nettoyage ");
               this.$store.dispatch("cleanDatas").then(() => {
                 this.initEdit(even);

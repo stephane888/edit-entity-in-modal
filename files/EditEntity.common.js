@@ -5735,7 +5735,7 @@ __webpack_require__(3547);
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var _fieldsDrupal_loadField__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(4755);
+/* harmony import */ var _fieldsDrupal_loadField__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(7181);
 /**
  * Bug: Les plugins sont charger via cette route : /core/assets/vendor/
  * Cela est du au fait que il ya un ckeditor qui est chargé à partir de la. (/core/modules/ckeditor/js/ckeditor.js et /core/assets/vendor/ckeditor/ckeditor.js)
@@ -5945,7 +5945,7 @@ __webpack_require__(3547);
 
 /***/ }),
 
-/***/ 4755:
+/***/ 7181:
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -5955,7 +5955,7 @@ __webpack_require__.d(__webpack_exports__, {
   A: function() { return /* binding */ loadField; }
 });
 
-;// CONCATENATED MODULE: ./node_modules/babel-loader/lib/index.js??clonedRuleSet-40.use[1]!./node_modules/@vue/vue-loader-v15/lib/loaders/templateLoader.js??ruleSet[1].rules[3]!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!../components_bootstrapvuejs/src/components/fieldsDrupal/DrupalString.vue?vue&type=template&id=37e80514
+;// CONCATENATED MODULE: ./node_modules/babel-loader/lib/index.js??clonedRuleSet-40.use[1]!./node_modules/@vue/vue-loader-v15/lib/loaders/templateLoader.js??ruleSet[1].rules[3]!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!../components_bootstrapvuejs/src/components/fieldsDrupal/DrupalString.vue?vue&type=template&id=58e13976
 var render = function render() {
   var _vm = this,
     _c = _vm._self._c;
@@ -6626,8 +6626,8 @@ var drupal_color_component = (0,componentNormalizer/* default */.A)(
 )
 
 /* harmony default export */ var drupal_color = (drupal_color_component.exports);
-;// CONCATENATED MODULE: ./node_modules/babel-loader/lib/index.js??clonedRuleSet-40.use[1]!./node_modules/@vue/vue-loader-v15/lib/loaders/templateLoader.js??ruleSet[1].rules[3]!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!../components_bootstrapvuejs/src/components/fieldsDrupal/DrupalRadios.vue?vue&type=template&id=b668fa62&scoped=true
-var DrupalRadiosvue_type_template_id_b668fa62_scoped_true_render = function render() {
+;// CONCATENATED MODULE: ./node_modules/babel-loader/lib/index.js??clonedRuleSet-40.use[1]!./node_modules/@vue/vue-loader-v15/lib/loaders/templateLoader.js??ruleSet[1].rules[3]!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!../components_bootstrapvuejs/src/components/fieldsDrupal/DrupalRadios.vue?vue&type=template&id=9f7ed0aa&scoped=true
+var DrupalRadiosvue_type_template_id_9f7ed0aa_scoped_true_render = function render() {
   var _vm = this,
     _c = _vm._self._c;
   return _c('div', {
@@ -6737,7 +6737,7 @@ var DrupalRadiosvue_type_template_id_b668fa62_scoped_true_render = function rend
     }])
   })], 1)]);
 };
-var DrupalRadiosvue_type_template_id_b668fa62_scoped_true_staticRenderFns = [];
+var DrupalRadiosvue_type_template_id_9f7ed0aa_scoped_true_staticRenderFns = [];
 
 ;// CONCATENATED MODULE: ./node_modules/babel-loader/lib/index.js??clonedRuleSet-40.use[1]!./node_modules/@vue/vue-loader-v15/lib/loaders/templateLoader.js??ruleSet[1].rules[3]!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!../components_bootstrapvuejs/src/components/fieldsDrupal/svg-preloader.vue?vue&type=template&id=d69890ba&scoped=true
 var svg_preloadervue_type_template_id_d69890ba_scoped_true_render = function render() {
@@ -6885,10 +6885,10 @@ var svg_preloader_component = (0,componentNormalizer/* default */.A)(
       return __webpack_require__.e(/* import() */ 132).then(__webpack_require__.bind(__webpack_require__, 6132));
     },
     OptionsAllowedValues: () => {
-      return __webpack_require__.e(/* import() */ 36).then(__webpack_require__.bind(__webpack_require__, 6036));
+      return __webpack_require__.e(/* import() */ 588).then(__webpack_require__.bind(__webpack_require__, 3588));
     },
     OptionsEntities: () => {
-      return __webpack_require__.e(/* import() */ 118).then(__webpack_require__.bind(__webpack_require__, 9118));
+      return __webpack_require__.e(/* import() */ 905).then(__webpack_require__.bind(__webpack_require__, 3905));
     }
   },
   props: {
@@ -6955,7 +6955,6 @@ var svg_preloader_component = (0,componentNormalizer/* default */.A)(
   },
   mounted() {
     this.getImage();
-    console.log("load image boolean");
   },
   methods: {
     getImage() {
@@ -6993,10 +6992,10 @@ var svg_preloader_component = (0,componentNormalizer/* default */.A)(
 });
 ;// CONCATENATED MODULE: ../components_bootstrapvuejs/src/components/fieldsDrupal/DrupalRadios.vue?vue&type=script&lang=js
  /* harmony default export */ var fieldsDrupal_DrupalRadiosvue_type_script_lang_js = (DrupalRadiosvue_type_script_lang_js); 
-;// CONCATENATED MODULE: ./node_modules/mini-css-extract-plugin/dist/loader.js??clonedRuleSet-12.use[0]!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-12.use[1]!./node_modules/@vue/vue-loader-v15/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-12.use[2]!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!../components_bootstrapvuejs/src/components/fieldsDrupal/DrupalRadios.vue?vue&type=style&index=0&id=b668fa62&prod&scoped=true&lang=css
+;// CONCATENATED MODULE: ./node_modules/mini-css-extract-plugin/dist/loader.js??clonedRuleSet-12.use[0]!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-12.use[1]!./node_modules/@vue/vue-loader-v15/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-12.use[2]!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!../components_bootstrapvuejs/src/components/fieldsDrupal/DrupalRadios.vue?vue&type=style&index=0&id=9f7ed0aa&prod&scoped=true&lang=css
 // extracted by mini-css-extract-plugin
 
-;// CONCATENATED MODULE: ../components_bootstrapvuejs/src/components/fieldsDrupal/DrupalRadios.vue?vue&type=style&index=0&id=b668fa62&prod&scoped=true&lang=css
+;// CONCATENATED MODULE: ../components_bootstrapvuejs/src/components/fieldsDrupal/DrupalRadios.vue?vue&type=style&index=0&id=9f7ed0aa&prod&scoped=true&lang=css
 
 ;// CONCATENATED MODULE: ../components_bootstrapvuejs/src/components/fieldsDrupal/DrupalRadios.vue
 
@@ -7009,11 +7008,11 @@ var svg_preloader_component = (0,componentNormalizer/* default */.A)(
 
 var DrupalRadios_component = (0,componentNormalizer/* default */.A)(
   fieldsDrupal_DrupalRadiosvue_type_script_lang_js,
-  DrupalRadiosvue_type_template_id_b668fa62_scoped_true_render,
-  DrupalRadiosvue_type_template_id_b668fa62_scoped_true_staticRenderFns,
+  DrupalRadiosvue_type_template_id_9f7ed0aa_scoped_true_render,
+  DrupalRadiosvue_type_template_id_9f7ed0aa_scoped_true_staticRenderFns,
   false,
   null,
-  "b668fa62",
+  "9f7ed0aa",
   null
   
 )
@@ -7491,8 +7490,8 @@ var html_render_component = (0,componentNormalizer/* default */.A)(
 )
 
 /* harmony default export */ var html_render = (html_render_component.exports);
-;// CONCATENATED MODULE: ./node_modules/babel-loader/lib/index.js??clonedRuleSet-40.use[1]!./node_modules/@vue/vue-loader-v15/lib/loaders/templateLoader.js??ruleSet[1].rules[3]!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!../components_bootstrapvuejs/src/components/fieldsDrupal/drupal-file.vue?vue&type=template&id=9ae59c16
-var drupal_filevue_type_template_id_9ae59c16_render = function render() {
+;// CONCATENATED MODULE: ./node_modules/babel-loader/lib/index.js??clonedRuleSet-40.use[1]!./node_modules/@vue/vue-loader-v15/lib/loaders/templateLoader.js??ruleSet[1].rules[3]!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!../components_bootstrapvuejs/src/components/fieldsDrupal/drupal-file.vue?vue&type=template&id=6ebea929
+var drupal_filevue_type_template_id_6ebea929_render = function render() {
   var _vm = this,
     _c = _vm._self._c;
   return _c('div', {
@@ -7604,7 +7603,7 @@ var drupal_filevue_type_template_id_9ae59c16_render = function render() {
     }) : _vm._e()], 1);
   }), 0)], 1);
 };
-var drupal_filevue_type_template_id_9ae59c16_staticRenderFns = [];
+var drupal_filevue_type_template_id_6ebea929_staticRenderFns = [];
 
 ;// CONCATENATED MODULE: ./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib/index.js??clonedRuleSet-40.use[1]!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!../components_bootstrapvuejs/src/components/fieldsDrupal/drupal-file.vue?vue&type=script&lang=js
 
@@ -7800,7 +7799,6 @@ var drupal_filevue_type_template_id_9ae59c16_staticRenderFns = [];
       if (this.model[this.field.name] && this.model[this.field.name].length) {
         this.toUplode = [];
         this.model[this.field.name].forEach(item => {
-          console.log("item image:", item);
           if (loadField.config) {
             const toUplode = {
               url: "",
@@ -7859,8 +7857,8 @@ var drupal_filevue_type_template_id_9ae59c16_staticRenderFns = [];
 ;
 var drupal_file_component = (0,componentNormalizer/* default */.A)(
   fieldsDrupal_drupal_filevue_type_script_lang_js,
-  drupal_filevue_type_template_id_9ae59c16_render,
-  drupal_filevue_type_template_id_9ae59c16_staticRenderFns,
+  drupal_filevue_type_template_id_6ebea929_render,
+  drupal_filevue_type_template_id_6ebea929_staticRenderFns,
   false,
   null,
   null,
@@ -8761,8 +8759,8 @@ var MultiSelectvue_type_template_id_03a152cd_staticRenderFns = [];
 /* harmony default export */ var MultiSelectvue_type_script_lang_js = ({
   name: "MultiSelect",
   components: {
-    MultiSelectTaxo: () => __webpack_require__.e(/* import() */ 430).then(__webpack_require__.bind(__webpack_require__, 7430)),
-    MultiSelectEntities: () => __webpack_require__.e(/* import() */ 404).then(__webpack_require__.bind(__webpack_require__, 404))
+    MultiSelectTaxo: () => __webpack_require__.e(/* import() */ 272).then(__webpack_require__.bind(__webpack_require__, 9272)),
+    MultiSelectEntities: () => __webpack_require__.e(/* import() */ 582).then(__webpack_require__.bind(__webpack_require__, 8582))
   },
   props: {
     classCss: {
@@ -9659,8 +9657,8 @@ var DrupalEmail_component = (0,componentNormalizer/* default */.A)(
 )
 
 /* harmony default export */ var DrupalEmail = (DrupalEmail_component.exports);
-;// CONCATENATED MODULE: ./node_modules/babel-loader/lib/index.js??clonedRuleSet-40.use[1]!./node_modules/@vue/vue-loader-v15/lib/loaders/templateLoader.js??ruleSet[1].rules[3]!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!../components_bootstrapvuejs/src/components/fieldsDrupal/DrupalCheckbox.vue?vue&type=template&id=65327e6c&scoped=true
-var DrupalCheckboxvue_type_template_id_65327e6c_scoped_true_render = function render() {
+;// CONCATENATED MODULE: ./node_modules/babel-loader/lib/index.js??clonedRuleSet-40.use[1]!./node_modules/@vue/vue-loader-v15/lib/loaders/templateLoader.js??ruleSet[1].rules[3]!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!../components_bootstrapvuejs/src/components/fieldsDrupal/DrupalCheckbox.vue?vue&type=template&id=4fe918da&scoped=true
+var DrupalCheckboxvue_type_template_id_4fe918da_scoped_true_render = function render() {
   var _vm = this,
     _c = _vm._self._c;
   return _c('div', {
@@ -9680,16 +9678,16 @@ var DrupalCheckboxvue_type_template_id_65327e6c_scoped_true_render = function re
       key: "default",
       fn: function (v) {
         return [_vm.field.type == 'boolean_checkbox' ? _c('b-form-group', {
-          class: _vm.size ? 'size-' + _vm.size : '',
+          class: [_vm.size ? 'size-' + _vm.size : ''],
           attrs: {
             "label": _vm.field.label,
             "description": _vm.field.description
           }
         }, [_c('b-form-checkbox', {
+          staticClass: "form-check-input-custom ms-0 ps-0",
           attrs: {
             "name": _vm.fullname,
-            "size": _vm.size,
-            "switch": ""
+            "size": _vm.size
           },
           on: {
             "change": _vm.input
@@ -9791,7 +9789,7 @@ var DrupalCheckboxvue_type_template_id_65327e6c_scoped_true_render = function re
     }])
   })], 1)]);
 };
-var DrupalCheckboxvue_type_template_id_65327e6c_scoped_true_staticRenderFns = [];
+var DrupalCheckboxvue_type_template_id_4fe918da_scoped_true_staticRenderFns = [];
 
 ;// CONCATENATED MODULE: ./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib/index.js??clonedRuleSet-40.use[1]!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!../components_bootstrapvuejs/src/components/fieldsDrupal/DrupalCheckbox.vue?vue&type=script&lang=js
 
@@ -9958,10 +9956,10 @@ var DrupalCheckboxvue_type_template_id_65327e6c_scoped_true_staticRenderFns = []
 });
 ;// CONCATENATED MODULE: ../components_bootstrapvuejs/src/components/fieldsDrupal/DrupalCheckbox.vue?vue&type=script&lang=js
  /* harmony default export */ var fieldsDrupal_DrupalCheckboxvue_type_script_lang_js = (DrupalCheckboxvue_type_script_lang_js); 
-;// CONCATENATED MODULE: ./node_modules/mini-css-extract-plugin/dist/loader.js??clonedRuleSet-12.use[0]!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-12.use[1]!./node_modules/@vue/vue-loader-v15/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-12.use[2]!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!../components_bootstrapvuejs/src/components/fieldsDrupal/DrupalCheckbox.vue?vue&type=style&index=0&id=65327e6c&prod&scoped=true&lang=css
+;// CONCATENATED MODULE: ./node_modules/mini-css-extract-plugin/dist/loader.js??clonedRuleSet-12.use[0]!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-12.use[1]!./node_modules/@vue/vue-loader-v15/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-12.use[2]!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!../components_bootstrapvuejs/src/components/fieldsDrupal/DrupalCheckbox.vue?vue&type=style&index=0&id=4fe918da&prod&scoped=true&lang=css
 // extracted by mini-css-extract-plugin
 
-;// CONCATENATED MODULE: ../components_bootstrapvuejs/src/components/fieldsDrupal/DrupalCheckbox.vue?vue&type=style&index=0&id=65327e6c&prod&scoped=true&lang=css
+;// CONCATENATED MODULE: ../components_bootstrapvuejs/src/components/fieldsDrupal/DrupalCheckbox.vue?vue&type=style&index=0&id=4fe918da&prod&scoped=true&lang=css
 
 ;// CONCATENATED MODULE: ../components_bootstrapvuejs/src/components/fieldsDrupal/DrupalCheckbox.vue
 
@@ -9974,11 +9972,11 @@ var DrupalCheckboxvue_type_template_id_65327e6c_scoped_true_staticRenderFns = []
 
 var DrupalCheckbox_component = (0,componentNormalizer/* default */.A)(
   fieldsDrupal_DrupalCheckboxvue_type_script_lang_js,
-  DrupalCheckboxvue_type_template_id_65327e6c_scoped_true_render,
-  DrupalCheckboxvue_type_template_id_65327e6c_scoped_true_staticRenderFns,
+  DrupalCheckboxvue_type_template_id_4fe918da_scoped_true_render,
+  DrupalCheckboxvue_type_template_id_4fe918da_scoped_true_staticRenderFns,
   false,
   null,
-  "65327e6c",
+  "4fe918da",
   null
   
 )
@@ -12058,8 +12056,8 @@ var PhoneInternational_component = (0,componentNormalizer/* default */.A)(
 )
 
 /* harmony default export */ var PhoneInternational = (PhoneInternational_component.exports);
-;// CONCATENATED MODULE: ./node_modules/babel-loader/lib/index.js??clonedRuleSet-40.use[1]!./node_modules/@vue/vue-loader-v15/lib/loaders/templateLoader.js??ruleSet[1].rules[3]!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!../components_bootstrapvuejs/src/components/fieldsDrupal/MoreFieldsAccordion.vue?vue&type=template&id=ce7f45fe
-var MoreFieldsAccordionvue_type_template_id_ce7f45fe_render = function render() {
+;// CONCATENATED MODULE: ./node_modules/babel-loader/lib/index.js??clonedRuleSet-40.use[1]!./node_modules/@vue/vue-loader-v15/lib/loaders/templateLoader.js??ruleSet[1].rules[3]!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!../components_bootstrapvuejs/src/components/fieldsDrupal/MoreFieldsAccordion.vue?vue&type=template&id=7939768d
+var MoreFieldsAccordionvue_type_template_id_7939768d_render = function render() {
   var _vm = this,
     _c = _vm._self._c;
   return _c('div', {
@@ -12109,11 +12107,12 @@ var MoreFieldsAccordionvue_type_template_id_ce7f45fe_render = function render() 
               value: _vm.fullname + '-' + idx,
               expression: "fullname + '-' + idx"
             }],
+            staticClass: "w-100 text-white fw-bold",
             attrs: {
               "block": "",
-              "variant": "info"
+              "variant": "secondary"
             }
-          }, [_vm._v(" " + _vm._s(_vm._f("truncate")(item.title, 20, "... ")) + " ")])], 1), _c('b-collapse', {
+          }, [_vm._v(" Block: " + _vm._s(idx) + " ( "), _c('i', [_vm._v(_vm._s(_vm._f("truncate")(item.title, 20, "... ")))]), _vm._v(" ) ")])], 1), _c('b-collapse', {
             attrs: {
               "id": _vm.fullname + '-' + idx,
               "visible": idx == 0,
@@ -12267,7 +12266,7 @@ var MoreFieldsAccordionvue_type_template_id_ce7f45fe_render = function render() 
     }])
   })], 1);
 };
-var MoreFieldsAccordionvue_type_template_id_ce7f45fe_staticRenderFns = [];
+var MoreFieldsAccordionvue_type_template_id_7939768d_staticRenderFns = [];
 
 ;// CONCATENATED MODULE: ./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib/index.js??clonedRuleSet-40.use[1]!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!../components_bootstrapvuejs/src/components/fieldsDrupal/MoreFieldsAccordion.vue?vue&type=script&lang=js
 
@@ -12447,8 +12446,8 @@ var MoreFieldsAccordionvue_type_template_id_ce7f45fe_staticRenderFns = [];
 ;
 var MoreFieldsAccordion_component = (0,componentNormalizer/* default */.A)(
   fieldsDrupal_MoreFieldsAccordionvue_type_script_lang_js,
-  MoreFieldsAccordionvue_type_template_id_ce7f45fe_render,
-  MoreFieldsAccordionvue_type_template_id_ce7f45fe_staticRenderFns,
+  MoreFieldsAccordionvue_type_template_id_7939768d_render,
+  MoreFieldsAccordionvue_type_template_id_7939768d_staticRenderFns,
   false,
   null,
   null,
@@ -13294,6 +13293,7 @@ var AccordionCard_component = (0,componentNormalizer/* default */.A)(
     switch (key) {
       case "string":
       case "string_textfield":
+      case "text_textfield":
         template = DrupalString;
         break;
       case "number":
@@ -13400,7 +13400,6 @@ var AccordionCard_component = (0,componentNormalizer/* default */.A)(
   },
   getImageUrl(fid, style = "medium", param = []) {
     const url = this.config.get("/filesmanager/image/" + fid + "/" + style);
-    console.log("image url: ", url);
     return url;
   },
   getVideoThumbUrl(fid, style = "medium") {
@@ -13446,7 +13445,7 @@ var AccordionCard_component = (0,componentNormalizer/* default */.A)(
 "use strict";
 /* harmony import */ var core_js_modules_es_array_push_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(3518);
 /* harmony import */ var core_js_modules_es_array_push_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_push_js__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _components_fieldsDrupal_loadField__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(4755);
+/* harmony import */ var _components_fieldsDrupal_loadField__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(7181);
 
 
 /**
@@ -13549,8 +13548,8 @@ var AccordionCard_component = (0,componentNormalizer/* default */.A)(
    */
   prepareSaveEntities(store, datas, suivers, ActionDomainId = false) {
     return new Promise((resolu, rejecte) => {
-      //console.log("prepareSaveEntities");
-      // on vide les derniers ids.
+      // console.log("prepareSaveEntities");
+      // On vide les derniers ids.
       this.lastIdsEntity = [];
       const updateDomainId = entity => {
         //console.log("entity.field_domain_source : ", entity, "\n ActionDomainId : ", ActionDomainId, "\n this.domainRegister : ", this.domainRegister);
@@ -13598,13 +13597,26 @@ var AccordionCard_component = (0,componentNormalizer/* default */.A)(
               const keys = Object.keys(items[i].entities);
               loopFieldEntity(items[i].entities, keys[0], items[i].entity, keys, 0).then(entity => {
                 const saveEntity = () => {
-                  store.dispatch("saveEntity", {
+                  const payloads = {
                     entity_type_id: items[i].target_type,
                     value: updateDomainId(entity),
-                    index: i
-                  }).then(resp => {
+                    index: i,
+                    translations: {}
+                  };
+                  if (items[i].translations) {
+                    for (const k in items[i].translations) {
+                      const translate_entity = items[i].translations[k];
+                      keys.forEach(key_fieldName => {
+                        if (translate_entity[key_fieldName]) {
+                          translate_entity[key_fieldName] = entity[key_fieldName];
+                        }
+                      });
+                      payloads.translations[k] = updateDomainId(translate_entity);
+                    }
+                  }
+                  store.dispatch("saveEntity", payloads).then(resp => {
                     suivers.creates++;
-                    //console.log(" Before loopItemAddValues 1 : ", values);
+                    // console.log(" Before loopItemAddValues 1 : ", values);
                     if (!loopItemAddValues(values, resp, has_target_revision_id)) reject(" Revision requis mais non definit ");
                     i = i + 1;
                     if (i < items.length) {
@@ -13628,21 +13640,28 @@ var AccordionCard_component = (0,componentNormalizer/* default */.A)(
                 };
                 saveEntity();
               }).catch(er => {
-                //console.log(" catch loopItem : ", er);
+                // console.log(" catch loopItem : ", er);
                 reject(er);
               });
             } else {
               const saveEntity = () => {
-                store.dispatch("saveEntity", {
+                const payloads = {
                   entity_type_id: item.target_type,
                   value: updateDomainId(item.entity),
-                  index: i
-                }).then(resp => {
+                  index: i,
+                  translations: {}
+                };
+                if (item.translations) {
+                  for (const k in item.translations) {
+                    const translate_entity = item.translations[k];
+                    payloads.translations[k] = updateDomainId(translate_entity);
+                  }
+                }
+                store.dispatch("saveEntity", payloads).then(resp => {
                   suivers.creates++;
-                  //console.log(" Before loopItemAddValues 2 : ", values);
+                  // console.log(" Before loopItemAddValues 2 : ", values);
                   if (!loopItemAddValues(values, resp, has_target_revision_id)) reject(" Revision requis mais non definit ");
                   // values.push({ target_id: resp.data.id });
-
                   i = i + 1;
                   if (items.length <= i) {
                     resolv(loopItem(items, i, values, has_target_revision_id));
@@ -13687,12 +13706,12 @@ var AccordionCard_component = (0,componentNormalizer/* default */.A)(
           // Si le champs contient des données,
           // on parcourt chacune des entrées.
           if (datas[fieldname] && datas[fieldname].length > 0) {
+            var has_target_revision_id = false;
             //console.log("entity[fieldname][0] : ", entity[fieldname][0], "\n : ", entity);
             // on verifie s'il ya des entrées supplementaire
-            if (entity[fieldname][0]) {
-              var has_target_revision_id = false;
+            // fieldname n'existe pas forcement, ( par exmple le cas de menu ).
+            if (entity[fieldname] && entity[fieldname][0]) {
               const keys = Object.keys(entity[fieldname][0]);
-              //
               if (keys.includes("target_revision_id")) {
                 has_target_revision_id = true;
               }
@@ -13703,8 +13722,9 @@ var AccordionCard_component = (0,componentNormalizer/* default */.A)(
             }
             // Pour chaque champs, on cree les contenus et on recupere les ids.
             loopItem(datas[fieldname], 0, [], has_target_revision_id).then(resp => {
-              //console.log(" loopFieldEntity result of loopItem : ", resp);
-              entity[fieldname] = resp;
+              // console.log(" loopFieldEntity result of loopItem : ", resp);
+              // le champs fieldname n'existe pas forcement, example le cas des menus.
+              if (entity[fieldname]) entity[fieldname] = resp;
               // on passe au champs suivant.
               i = i + 1;
               if (keys.length > i) {
@@ -13732,19 +13752,32 @@ var AccordionCard_component = (0,componentNormalizer/* default */.A)(
        */
       const loopEntityPromise = (datas, i = null, values = [], essaie = 0) => {
         return new Promise((resolv, reject) => {
-          //console.log("loopEntityPromise : ", datas);
+          // console.log("loopEntityPromise : ", datas, "\n", i);
           if (datas[i]) {
             // S'il contient des sous entités.
             if (datas[i].entities && typeof datas[i].entities === "object") {
               const keys = Object.keys(datas[i].entities);
               loopFieldEntity(datas[i].entities, keys[0], datas[i].entity, keys, 0).then(entity => {
-                //console.log(" loopEntityPromise SEND with override entity : ", entity);
+                // console.log(" loopEntityPromise SEND with override entity : ", entity);
                 const saveEntity = () => {
-                  store.dispatch("saveEntity", {
+                  const payloads = {
                     entity_type_id: datas[i].target_type,
                     value: updateDomainId(entity),
-                    index: i
-                  }).then(resp => {
+                    index: i,
+                    translations: {}
+                  };
+                  if (datas[i].translations) {
+                    for (const k in datas[i].translations) {
+                      const translate_entity = datas[i].translations[k];
+                      keys.forEach(key_fieldName => {
+                        if (translate_entity[key_fieldName]) {
+                          translate_entity[key_fieldName] = entity[key_fieldName];
+                        }
+                      });
+                      payloads.translations[k] = updateDomainId(translate_entity);
+                    }
+                  }
+                  store.dispatch("saveEntity", payloads).then(resp => {
                     suivers.creates++;
                     this.lastIdsEntity.push({
                       target_id: resp.data.id
@@ -13761,30 +13794,39 @@ var AccordionCard_component = (0,componentNormalizer/* default */.A)(
                      */
                     if (essaie < this.numberTry) {
                       essaie++;
-                      //console.log("loopEntityPromise re-try : ", essaie);
+                      // console.log("loopEntityPromise re-try : ", essaie);
                       setTimeout(() => {
                         saveEntity();
                       }, this.timeWaitBeforeRetry);
                     } else {
-                      //console.log("catch loopEntityPromise : ", er);
+                      // console.log("catch loopEntityPromise : ", er);
                       reject(er);
                     }
                   });
                 };
                 saveEntity();
               }).catch(er => {
-                //console.log("catch loopEntityPromise : ", er);
+                // console.log("catch loopEntityPromise : ", er);
                 reject(er);
               });
             }
             // S'il ne contient pas de sous entité.
             else {
               const saveEntity = () => {
-                store.dispatch("saveEntity", {
+                const payloads = {
                   entity_type_id: datas[i].target_type,
                   value: updateDomainId(datas[i].entity),
-                  index: i
-                }).then(resp => {
+                  index: i,
+                  translations: {}
+                };
+                if (datas[i].translations) {
+                  for (const k in datas[i].translations) {
+                    const translate_entity = datas[i].translations[k];
+                    payloads.translations[k] = updateDomainId(translate_entity);
+                  }
+                }
+                //
+                store.dispatch("saveEntity", payloads).then(resp => {
                   suivers.creates++;
                   this.lastIdsEntity.push({
                     target_id: resp.data.id
@@ -29420,30 +29462,29 @@ const AjaxToastBootStrap = {
       toaster: "b-toaster-top-right"
     });
   },
-  bPost: function (url, datas, configs, showNotification = false) {
+  bPost: function (url, datas, configs, showNotification = false, successMessage = "success", failureMessage = "warning") {
     return new Promise((resolv, reject) => {
       this.post(url, datas, configs).then(reponse => {
         if (showNotification) {
-          this.notification("success");
+          this.notification(successMessage);
         }
         resolv(reponse);
       }).catch(error => {
         //console.log("error : ", error);
-        this.notification(this.GetErrorTitle(error), "warning");
+        this.notification(this.GetErrorTitle(error), failureMessage);
         reject(error);
       });
     });
   },
-  bGet(url, configs, showNotification = false) {
+  bGet(url, configs, showNotification = false, successMessage = "success", failureMessage = "warning") {
     return new Promise((resolv, reject) => {
       this.get(url, configs).then(reponse => {
         if (showNotification) {
-          this.notification("success");
+          this.notification(successMessage);
         }
         resolv(reponse);
       }).catch(error => {
-        //console.log("error : ", error);
-        this.notification(this.GetErrorTitle(error), "warning");
+        this.notification(this.GetErrorTitle(error), failureMessage);
         reject(error);
       });
     });
@@ -32927,7 +32968,7 @@ if (typeof window !== 'undefined') {
 // EXTERNAL MODULE: external {"commonjs":"vue","commonjs2":"vue","root":"Vue"}
 var external_commonjs_vue_commonjs2_vue_root_Vue_ = __webpack_require__(4100);
 var external_commonjs_vue_commonjs2_vue_root_Vue_default = /*#__PURE__*/__webpack_require__.n(external_commonjs_vue_commonjs2_vue_root_Vue_);
-;// CONCATENATED MODULE: ./node_modules/babel-loader/lib/index.js??clonedRuleSet-40.use[1]!./node_modules/@vue/vue-loader-v15/lib/loaders/templateLoader.js??ruleSet[1].rules[3]!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/App/EditEntity.vue?vue&type=template&id=317ed955
+;// CONCATENATED MODULE: ./node_modules/babel-loader/lib/index.js??clonedRuleSet-40.use[1]!./node_modules/@vue/vue-loader-v15/lib/loaders/templateLoader.js??ruleSet[1].rules[3]!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/App/EditEntity.vue?vue&type=template&id=46d3f7d5
 var render = function render() {
   var _vm = this,
     _c = _vm._self._c;
@@ -33157,7 +33198,7 @@ var wbuutilities = __webpack_require__(5583);
   // TestDomain: "http://wb-horizon.kksa",
   // TestDomain: "http://test376.wb-horizon.kksa", // test specifique
   TestDomain: "http://" + window.location.host,
-  debug: true
+  debug: false
 });
 ;// CONCATENATED MODULE: ./node_modules/vuex/dist/vuex.esm.js
 
@@ -34488,7 +34529,7 @@ var ModalForm_component = (0,componentNormalizer/* default */.A)(
      * on force cette solution.
      */
     this.$root.$on("bv::modal::show", (bvEvent, modalId) => {
-      console.log("Modal is about to be shown", bvEvent, modalId);
+      // console.log("Modal is about to be shown", bvEvent, modalId);
       setTimeout(() => {
         const modal = document.getElementById(modalId);
         if (modal) {
@@ -34554,7 +34595,7 @@ var EditEntity_component = (0,componentNormalizer/* default */.A)(
 // EXTERNAL MODULE: ../components_bootstrapvuejs/src/js/FormUttilities.js
 var FormUttilities = __webpack_require__(8258);
 // EXTERNAL MODULE: ../components_bootstrapvuejs/src/components/fieldsDrupal/loadField.js + 138 modules
-var loadField = __webpack_require__(4755);
+var loadField = __webpack_require__(7181);
 // EXTERNAL MODULE: ../components_bootstrapvuejs/src/components/Ressouces/ckeditor-config.js
 var ckeditor_config = __webpack_require__(3520);
 ;// CONCATENATED MODULE: ./src/store/index.js
@@ -34709,11 +34750,7 @@ external_commonjs_vue_commonjs2_vue_root_Vue_default().use(vuex_esm);
           reject("Paramettre manquant");
         } else {
           request.bPost("/apivuejs/save-entity/" + payload.entity_type_id, payload.value).then(resp => {
-            console.log("resp : ", resp);
-            // setTimeout(() => {
-            console.log(" payload : ", payload);
             resolv(resp);
-            // }, 1000);
           }).catch(er => {
             reject(er);
           });
@@ -34749,7 +34786,6 @@ external_commonjs_vue_commonjs2_vue_root_Vue_default().use(vuex_esm);
         style += "@import '" + window.location.protocol + "//" + window.location.host + "/themes/custom/" + themeName + "/css/vendor-style.css';";
         style += "@import '" + window.location.protocol + "//" + window.location.host + "/themes/custom/" + themeName + "/css/global-style.css';";
         // style += "body{padding:1rem !important;}";
-        // console.log("style", style);
         ckeditor_config/* default */.A.getImportCss = function () {
           return "@import '" + request.getBaseUrl() + "/themes/contrib/wb_universe/node_modules/%40fortawesome/fontawesome-free/css/all.min.css'; " + style;
         };
@@ -34762,7 +34798,6 @@ external_commonjs_vue_commonjs2_vue_root_Vue_default().use(vuex_esm);
       commit("RUN_BUILDING_FIELDS");
       if (state.currentEntityForm.length) {
         FormUttilities/* default */.A.generateFields(state.currentEntityForm, fields).then(resp => {
-          console.log(" end buildFields resp : ", resp);
           commit("SET_FIELDS", resp);
         });
       }
@@ -66697,7 +66732,11 @@ var BootstrapVue = /*#__PURE__*/{
  // Default export is the BootstrapVue plugin
 
 /* harmony default export */ var esm = ((/* unused pure expression or super */ null && (BootstrapVue)));
+;// CONCATENATED MODULE: ./node_modules/bootstrap-vue/dist/bootstrap-vue.css
+// extracted by mini-css-extract-plugin
+
 ;// CONCATENATED MODULE: ./src/plugins/AppCmpts.js
+
 
 
 

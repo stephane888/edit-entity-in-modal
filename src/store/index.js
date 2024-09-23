@@ -112,13 +112,11 @@ export default new Vuex.Store({
         duplicate: false,
       };
 
-      return request
-        .bPost("/apivuejs/edit-duplicate-entity", param, {}, false)
-        .then((resp) => {
-          commit("DISABLE_RUNNING");
-          commit("SET_CURRENT_ENTITY_FORM", resp.data);
-          dispatch("buildFields");
-        });
+      return request.bPost("/apivuejs/edit-duplicate-entity", param, {}, false).then((resp) => {
+        commit("DISABLE_RUNNING");
+        commit("SET_CURRENT_ENTITY_FORM", resp.data);
+        dispatch("buildFields");
+      });
     },
     saveEntities({ commit, state }) {
       return new Promise((resolv, reject) => {
@@ -128,11 +126,7 @@ export default new Vuex.Store({
           .then((numbers) => {
             state.run_entity.numbers = numbers;
             generateField
-              .prepareSaveEntities(
-                this,
-                state.currentEntityForm,
-                state.run_entity
-              )
+              .prepareSaveEntities(this, state.currentEntityForm, state.run_entity)
               .then((resp) => {
                 commit("DISABLE_RUNNING");
                 resolv(resp);
@@ -155,16 +149,9 @@ export default new Vuex.Store({
           reject("Paramettre manquant");
         } else {
           request
-            .bPost(
-              "/apivuejs/save-entity/" + payload.entity_type_id,
-              payload.value
-            )
+            .bPost("/apivuejs/save-entity/" + payload.entity_type_id, payload.value)
             .then((resp) => {
-              console.log("resp : ", resp);
-              // setTimeout(() => {
-              console.log(" payload : ", payload);
               resolv(resp);
-              // }, 1000);
             })
             .catch((er) => {
               reject(er);
@@ -190,55 +177,25 @@ export default new Vuex.Store({
       if (window.location.host.includes("wb-horizon.")) {
         // style =
         //   "@import 'https://wb-horizon.com/themes/custom/wb_horizon_com/css/vendor-style.css';";
-        const themeName = window.location.host
-          .replaceAll("-", "_")
-          .replaceAll(".", "_");
-        style +=
-          "@import '" +
-          window.location.protocol +
-          "//" +
-          window.location.host +
-          "/themes/custom/" +
-          themeName +
-          "/css/vendor-style.css';";
-        style +=
-          "@import '" +
-          window.location.protocol +
-          "//" +
-          window.location.host +
-          "/themes/custom/" +
-          themeName +
-          "/css/global-style.css';";
+        const themeName = window.location.host.replaceAll("-", "_").replaceAll(".", "_");
+        style += "@import '" + window.location.protocol + "//" + window.location.host + "/themes/custom/" + themeName + "/css/vendor-style.css';";
+        style += "@import '" + window.location.protocol + "//" + window.location.host + "/themes/custom/" + themeName + "/css/global-style.css';";
         // style += "body{padding:1rem !important;}";
-        // console.log("style", style);
         ckeditorConfig.getImportCss = function () {
-          return (
-            "@import '" +
-            request.getBaseUrl() +
-            "/themes/contrib/wb_universe/node_modules/%40fortawesome/fontawesome-free/css/all.min.css'; " +
-            style
-          );
+          return "@import '" + request.getBaseUrl() + "/themes/contrib/wb_universe/node_modules/%40fortawesome/fontawesome-free/css/all.min.css'; " + style;
         };
       } else {
         // il est preferable que cela soit un paramettre au niveau du module drupal.
         ckeditorConfig.getImportCss = function () {
-          return (
-            "@import '" +
-            request.getBaseUrl() +
-            "/themes/contrib/wb_universe/node_modules/%40fortawesome/fontawesome-free/css/all.min.css'; " +
-            style
-          );
+          return "@import '" + request.getBaseUrl() + "/themes/contrib/wb_universe/node_modules/%40fortawesome/fontawesome-free/css/all.min.css'; " + style;
         };
       }
 
       commit("RUN_BUILDING_FIELDS");
       if (state.currentEntityForm.length) {
-        generateField
-          .generateFields(state.currentEntityForm, fields)
-          .then((resp) => {
-            console.log(" end buildFields resp : ", resp);
-            commit("SET_FIELDS", resp);
-          });
+        generateField.generateFields(state.currentEntityForm, fields).then((resp) => {
+          commit("SET_FIELDS", resp);
+        });
       }
     },
   },

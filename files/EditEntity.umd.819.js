@@ -1,7 +1,7 @@
 "use strict";
-((typeof self !== 'undefined' ? self : this)["webpackChunkedit_entity_in_layout"] = (typeof self !== 'undefined' ? self : this)["webpackChunkedit_entity_in_layout"] || []).push([[430],{
+((typeof self !== 'undefined' ? self : this)["webpackChunkEditEntity"] = (typeof self !== 'undefined' ? self : this)["webpackChunkEditEntity"] || []).push([[819],{
 
-/***/ 7430:
+/***/ 2819:
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 // ESM COMPAT FLAG
@@ -12,7 +12,7 @@ __webpack_require__.d(__webpack_exports__, {
   "default": function() { return /* binding */ MultiSelectTaxo; }
 });
 
-;// CONCATENATED MODULE: ./node_modules/babel-loader/lib/index.js??clonedRuleSet-40.use[1]!./node_modules/@vue/vue-loader-v15/lib/loaders/templateLoader.js??ruleSet[1].rules[3]!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!../components_bootstrapvuejs/src/components/Ressouces/MultiSelectTaxo.vue?vue&type=template&id=4b13c34d
+;// CONCATENATED MODULE: ./node_modules/babel-loader/lib/index.js??clonedRuleSet-82.use[1]!./node_modules/@vue/vue-loader-v15/lib/loaders/templateLoader.js??ruleSet[1].rules[3]!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!../components_bootstrapvuejs/src/components/Ressouces/MultiSelectTaxo.vue?vue&type=template&id=0e3615ce
 var render = function render() {
   var _vm = this,
     _c = _vm._self._c;
@@ -42,7 +42,7 @@ var render = function render() {
             "show-no-results": true,
             "show-labels": false,
             "loading": _vm.isLoading,
-            "multiple": _vm.isMultiple,
+            "multiple": _vm.cardinality,
             "allow-empty": true
           },
           on: {
@@ -85,15 +85,15 @@ var staticRenderFns = [];
 // EXTERNAL MODULE: ../components_bootstrapvuejs/node_modules/core-js/modules/es.array.push.js
 var es_array_push = __webpack_require__(3518);
 // EXTERNAL MODULE: ./node_modules/vee-validate/dist/vee-validate.esm.js
-var vee_validate_esm = __webpack_require__(3178);
+var vee_validate_esm = __webpack_require__(7020);
 // EXTERNAL MODULE: ../components_bootstrapvuejs/node_modules/vue-multiselect/dist/vue-multiselect.min.js
-var vue_multiselect_min = __webpack_require__(9759);
+var vue_multiselect_min = __webpack_require__(9014);
 var vue_multiselect_min_default = /*#__PURE__*/__webpack_require__.n(vue_multiselect_min);
 // EXTERNAL MODULE: ../drupal-vuejs/src/App/jsonApi/termsTaxo.js
-var termsTaxo = __webpack_require__(1036);
+var termsTaxo = __webpack_require__(8569);
 // EXTERNAL MODULE: ../components_bootstrapvuejs/src/components/fieldsDrupal/loadField.js + 138 modules
-var loadField = __webpack_require__(4755);
-;// CONCATENATED MODULE: ./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib/index.js??clonedRuleSet-40.use[1]!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!../components_bootstrapvuejs/src/components/Ressouces/MultiSelectTaxo.vue?vue&type=script&lang=js
+var loadField = __webpack_require__(439);
+;// CONCATENATED MODULE: ./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib/index.js??clonedRuleSet-82.use[1]!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!../components_bootstrapvuejs/src/components/Ressouces/MultiSelectTaxo.vue?vue&type=script&lang=js
 
 
 
@@ -134,15 +134,15 @@ var loadField = __webpack_require__(4755);
     fullname() {
       return this.parentName + this.field.name;
     },
-    isMultiple() {
-      if (this.field.cardinality > 1 || this.field.cardinality === -1) {
+    cardinality() {
+      if (this.field.cardinality === -1) {
         return true;
       } else {
         return false;
       }
     },
     auto_create() {
-      if (this.field.definition_settings && this.field.definition_settings.handler_settings) return this.field.definition_settings.handler_settings.auto_create;else return false;
+      return this.field.definition_settings.handler_settings.auto_create;
     },
     /**
      * @see https://skirtles-code.github.io/vue-examples/patterns/computed-v-model.html
@@ -162,7 +162,7 @@ var loadField = __webpack_require__(4755);
   //    * @param {*} val
   //    */
   //   value_select(val) {
-  //     if (this.isMultiple) {
+  //     if (this.cardinality) {
   //       const vals = [];
   //       val.forEach((item) => {
   //         vals.push({ target_id: item.value });
@@ -181,7 +181,7 @@ var loadField = __webpack_require__(4755);
   },
   methods: {
     /**
-     * Recupere un terme.
+     *
      * @param {*} tid
      */
     getTermByTid(tid) {
@@ -191,12 +191,10 @@ var loadField = __webpack_require__(4755);
       const terms = new termsTaxo/* default */.A(vocabulary);
       terms.getValueByTid(tid).then(() => {
         const options = terms.getOptions();
-        if (options) {
-          this.options.push(options[0]);
-          if (this.isMultiple) {
-            this.value_select.push(options[0]);
-          } else if (options[0]) this.value_select = options[0];
-        }
+        this.options = options;
+        if (this.cardinality) {
+          this.value_select = options;
+        } else if (options[0]) this.value_select = options[0];
         this.isLoading = false;
       }).catch(() => {
         this.isLoading = false;
@@ -206,12 +204,6 @@ var loadField = __webpack_require__(4755);
      *
      */
     loadDefaults() {
-      // init value before load terms.
-      if (this.isMultiple) {
-        this.value_select = [];
-      } else this.value_select = null;
-      this.options = [];
-      // Load terms names.
       this.model[this.field.name].forEach(item => {
         this.getTermByTid(item.target_id);
       });
@@ -235,22 +227,16 @@ var loadField = __webpack_require__(4755);
       const entity = {
         value: {
           name: newElement,
-          vid: this.getFistVocab()
+          vid: this.field.definition_settings.bundle_entity_type_id
         },
         entity_type_id: this.field.definition_settings.target_type
       };
       const action = this.namespaceStore ? this.namespaceStore + "/saveEntity" : "saveEntity";
       this.$store.dispatch(action, entity).then(response => {
-        if (this.isMultiple) {
-          if (!this.value_select) this.value_select = [];
-          this.value_select.push({
-            text: newElement,
-            value: response.data.id
-          });
-        } else this.value_select = {
+        this.value_select.push({
           text: newElement,
           value: response.data.id
-        };
+        });
         this.updateValue(this.value_select);
       }).catch(e => console.log("error: ", e));
     },
@@ -298,7 +284,7 @@ var loadField = __webpack_require__(4755);
     },
     updateValue(val) {
       this.value_select = val;
-      if (this.isMultiple) {
+      if (this.cardinality) {
         const vals = [];
         if (val && val.length) val.forEach(item => {
           vals.push({
@@ -344,4 +330,4 @@ var component = (0,componentNormalizer/* default */.A)(
 /***/ })
 
 }]);
-//# sourceMappingURL=EditEntity.common.430.js.map
+//# sourceMappingURL=EditEntity.umd.819.js.map

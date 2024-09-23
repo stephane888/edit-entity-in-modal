@@ -1,7 +1,7 @@
 "use strict";
-((typeof self !== 'undefined' ? self : this)["webpackChunkEditEntity"] = (typeof self !== 'undefined' ? self : this)["webpackChunkEditEntity"] || []).push([[950],{
+((typeof self !== 'undefined' ? self : this)["webpackChunkEditEntity"] = (typeof self !== 'undefined' ? self : this)["webpackChunkEditEntity"] || []).push([[120],{
 
-/***/ 3950:
+/***/ 120:
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 // ESM COMPAT FLAG
@@ -9,64 +9,102 @@ __webpack_require__.r(__webpack_exports__);
 
 // EXPORTS
 __webpack_require__.d(__webpack_exports__, {
-  "default": function() { return /* binding */ OptionsEntities; }
+  "default": function() { return /* binding */ MultiSelectEntities; }
 });
 
-;// CONCATENATED MODULE: ./node_modules/babel-loader/lib/index.js??clonedRuleSet-82.use[1]!./node_modules/@vue/vue-loader-v15/lib/loaders/templateLoader.js??ruleSet[1].rules[3]!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!../components_bootstrapvuejs/src/components/Ressouces/OptionsEntities.vue?vue&type=template&id=70654e40
+;// CONCATENATED MODULE: ./node_modules/babel-loader/lib/index.js??clonedRuleSet-82.use[1]!./node_modules/@vue/vue-loader-v15/lib/loaders/templateLoader.js??ruleSet[1].rules[3]!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!../components_bootstrapvuejs/src/components/Ressouces/MultiSelectEntities.vue?vue&type=template&id=096c5807
 var render = function render() {
   var _vm = this,
     _c = _vm._self._c;
-  return _c('div', [_c('b-form-group', {
+  return _c('ValidationProvider', {
     attrs: {
-      "label": _vm.field.label
-    }
-  }, [_vm.field.type == 'options_select' ? _c('b-form-select', {
-    attrs: {
-      "options": _vm.options,
-      "name": _vm.field.name
+      "name": _vm.fullname,
+      "rules": _vm.getRules()
     },
-    on: {
-      "change": _vm.input
-    },
-    model: {
-      value: _vm.selected,
-      callback: function ($$v) {
-        _vm.selected = $$v;
-      },
-      expression: "selected"
-    }
-  }) : _c('b-form-radio-group', {
-    attrs: {
-      "options": _vm.options,
-      "name": _vm.field.name
-    },
-    on: {
-      "change": _vm.input
-    },
-    model: {
-      value: _vm.selected,
-      callback: function ($$v) {
-        _vm.selected = $$v;
-      },
-      expression: "selected"
-    }
-  })], 1)], 1);
+    scopedSlots: _vm._u([{
+      key: "default",
+      fn: function (v) {
+        return [_c('b-form-group', {
+          attrs: {
+            "label": _vm.field.label,
+            "description": _vm.field.description
+          }
+        }, [_c('div', {
+          staticClass: "autocomplete"
+        }, [_c('multiselect', {
+          attrs: {
+            "options": _vm.options,
+            "custom-label": _vm.nameWithLang,
+            "placeholder": "",
+            "label": "text",
+            "track-by": "text",
+            "show-no-results": true,
+            "taggable": _vm.auto_create,
+            "show-labels": false,
+            "loading": _vm.isLoading,
+            "multiple": _vm.cardinality,
+            "allow-empty": true
+          },
+          on: {
+            "search-change": _vm.asyncFind,
+            "tag": _vm.createElement
+          },
+          model: {
+            value: _vm.value_computed,
+            callback: function ($$v) {
+              _vm.value_computed = $$v;
+            },
+            expression: "value_computed"
+          }
+        }, [_c('template', {
+          slot: "noResult"
+        }, [_c('span', {
+          staticClass: "option__title"
+        }, [_vm._v(" Aucun contenu ne correspond à votre recherche ")])]), _c('template', {
+          slot: "placeholder"
+        }, [_c('span', {
+          staticClass: "option__title"
+        }, [_vm._v(" Aucun contenu ... ")])]), _c('template', {
+          slot: "noOptions"
+        }, [_c('span', {
+          staticClass: "option__title"
+        }, [_vm._v(" Saisir un ou plusieurs caractères ... ")])])], 2), _c('div', {
+          staticClass: "text-danger"
+        }, _vm._l(v.errors, function (error, ii) {
+          return _c('small', {
+            key: ii,
+            staticClass: "d-block"
+          }, [_vm._v(" " + _vm._s(error) + " ")]);
+        }), 0)], 1)])];
+      }
+    }])
+  });
 };
 var staticRenderFns = [];
 
 // EXTERNAL MODULE: ../components_bootstrapvuejs/node_modules/core-js/modules/es.array.push.js
 var es_array_push = __webpack_require__(3518);
+// EXTERNAL MODULE: ./node_modules/vee-validate/dist/vee-validate.esm.js
+var vee_validate_esm = __webpack_require__(7020);
+// EXTERNAL MODULE: ../components_bootstrapvuejs/node_modules/vue-multiselect/dist/vue-multiselect.min.js
+var vue_multiselect_min = __webpack_require__(9014);
+var vue_multiselect_min_default = /*#__PURE__*/__webpack_require__.n(vue_multiselect_min);
 // EXTERNAL MODULE: ../drupal-vuejs/src/App/jsonApi/itemsEntity.js
 var itemsEntity = __webpack_require__(9808);
 // EXTERNAL MODULE: ../components_bootstrapvuejs/src/components/fieldsDrupal/loadField.js + 138 modules
-var loadField = __webpack_require__(667);
-;// CONCATENATED MODULE: ./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib/index.js??clonedRuleSet-82.use[1]!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!../components_bootstrapvuejs/src/components/Ressouces/OptionsEntities.vue?vue&type=script&lang=js
+var loadField = __webpack_require__(439);
+;// CONCATENATED MODULE: ./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib/index.js??clonedRuleSet-82.use[1]!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!../components_bootstrapvuejs/src/components/Ressouces/MultiSelectEntities.vue?vue&type=script&lang=js
 
 
 
-/* harmony default export */ var OptionsEntitiesvue_type_script_lang_js = ({
-  name: "OptionsEntities",
-  components: {},
+
+
+/* harmony default export */ var MultiSelectEntitiesvue_type_script_lang_js = ({
+  name: "MultiSelectEntities",
+  components: {
+    ValidationProvider: vee_validate_esm/* ValidationProvider */.LW,
+    Multiselect: (vue_multiselect_min_default())
+  },
   props: {
     field: {
       type: Object,
@@ -79,27 +117,115 @@ var loadField = __webpack_require__(667);
     namespaceStore: {
       type: String,
       required: true
+    },
+    parentName: {
+      type: String,
+      required: true
+    },
+    /**
+     * Pour effeutuer les requetes, certains champs initialise leur configuration, cela fontionne si l'application est interne au site.
+     * Mais dans le cadre d'une applcation decouplé, il faut utiliser la config definie par l'applicationde base. (dans ce cas on met true)
+     */
+    overrideConfig: {
+      type: Boolean,
+      default: false
     }
   },
   data() {
     return {
+      isLoading: false,
       options: [],
-      selected: null
+      value_select: null
     };
   },
+  computed: {
+    fullname() {
+      return this.parentName + this.field.name;
+    },
+    cardinality() {
+      if (this.field.cardinality === -1) {
+        return true;
+      } else {
+        return false;
+      }
+    },
+    auto_create() {
+      return this.field.definition_settings.handler_settings.auto_create;
+    },
+    /**
+     * @see https://skirtles-code.github.io/vue-examples/patterns/computed-v-model.html
+     */
+    value_computed: {
+      get() {
+        return this.value_select;
+      },
+      set(val) {
+        this.updateValue(val);
+      }
+    }
+  },
+  // watch: {
+  //   /**
+  //    * L'objectif est que cette valeur soit un reflet de la valeur contenu dans l'entité.
+  //    * ( il ya un probleme avec le watch, des que la valeur change, il envoit les données,
+  //    *  ce qui est faux, c'est unqiuement à la modification de l'utilisateur ).
+  //    * @param {*} val
+  //    */
+  //   // value_select(val) {
+  //   //   if (this.cardinality) {
+  //   //     const vals = [];
+  //   //     val.forEach((item) => {
+  //   //       vals.push({ target_id: item.value });
+  //   //     });
+  //   //     this.setValue(vals);
+  //   //   } else {
+  //   //     const vals = [];
+  //   //     vals.push({ target_id: val.value });
+  //   //     this.setValue(vals);
+  //   //   }
+  //   // },
+  // },
   mounted() {
-    this.loadTerms();
-    this.selected = this.getValue();
+    this.loadDefaults();
+    this.asyncFind("", true);
   },
   methods: {
-    loadTerms() {
+    /**
+     *
+     * @param {*} tid
+     */
+    getTermById(tid) {
       let entity_type_id = this.getFistVocab();
       if (entity_type_id && loadField/* default */.A.config) {
-        const terms = new itemsEntity/* default */.A(entity_type_id, entity_type_id, loadField/* default */.A.config);
-        terms.get().then(() => {
-          this.options = terms.getOptions();
+        const bundle = this.field.definition_settings.bundle_entity_type_id ? this.field.definition_settings.bundle_entity_type_id : entity_type_id;
+        const terms = new itemsEntity/* default */.A(entity_type_id, bundle, loadField/* default */.A.config);
+        if (this.overrideConfig) {
+          terms.remplaceConfig();
+          console.log("getTermById :::", this.overrideConfig);
+        }
+        this.isLoading = true;
+        terms.getValueById(tid).then(() => {
+          const options = terms.getOptions();
+          if (options[0]) {
+            this.options.push(options[0]);
+            if (this.cardinality) {
+              this.value_select.push(options[0]);
+            } else if (options[0]) this.value_select = options[0];
+          }
+          this.isLoading = false;
+        }).catch(() => {
+          this.isLoading = false;
         });
       }
+    },
+    /**
+     *
+     */
+    loadDefaults() {
+      this.value_select = [];
+      this.model[this.field.name].forEach(item => {
+        this.getTermById(item.target_id);
+      });
     },
     /**
      * --
@@ -114,30 +240,111 @@ var loadField = __webpack_require__(667);
     },
     /**
      *
-     * @param {*} val
+     * @param {*} search
      */
-    input(val) {
-      const vals = [];
-      vals.push({
-        target_id: val
-      });
-      this.$emit("setValue", vals);
+    asyncFind(search, init = false) {
+      if (search.length >= 2 || init) {
+        let entity_type_id = this.getFistVocab();
+        if (entity_type_id && loadField/* default */.A.config) {
+          const bundle = this.field.definition_settings.bundle_entity_type_id ? this.field.definition_settings.bundle_entity_type_id : entity_type_id;
+          const terms = new itemsEntity/* default */.A(entity_type_id, bundle, loadField/* default */.A.config);
+          if (this.overrideConfig) {
+            terms.remplaceConfig();
+          }
+          this.isLoading = true;
+          terms.getSearch(search).then(() => {
+            this.options = terms.getOptions();
+            this.isLoading = false;
+          }).catch(e => {
+            this.isLoading = false;
+            console.log(e);
+          });
+        }
+      }
     },
     /**
-     * --
+     *
+     * @param {string} newElement
      */
-    getValue() {
-      if (this.model[this.field.name] && this.model[this.field.name][0]) {
-        if (this.model[this.field.name][0].value) return this.model[this.field.name][0].value;else return this.model[this.field.name][0].target_id;
-      } else return null;
+    createElement(newElement) {
+      const entity = {
+        value: {
+          name: newElement
+        },
+        entity_type_id: this.field.definition_settings.target_type
+      };
+      const action = this.namespaceStore ? this.namespaceStore + "/saveEntity" : "saveEntity";
+      this.$store.dispatch(action, entity).then(response => {
+        this.value_select.push({
+          text: newElement,
+          value: response.data.id
+        });
+        this.updateValue(this.value_select);
+      }).catch(e => console.log("error: ", e));
+    },
+    /**
+     * cette fonction est utiliser pour mettre à jour les données dans l'entité.
+     * @deprecated
+     * @param {*} input
+     */
+    // selectUser(input) {
+    //   const vals = this.model[this.field.name];
+    //   vals.push({ target_id: input.value });
+    //   this.setValue(vals);
+    // },
+
+    nameWithLang({
+      text
+    }) {
+      return `${text}`;
+    },
+    /**
+     *
+     * @param {*} vals
+     */
+    setValue(vals) {
+      if (this.namespaceStore) {
+        this.$store.dispatch(this.namespaceStore + "/setValue", {
+          value: vals,
+          fieldName: this.fullname
+        });
+      } else this.$store.dispatch("setValue", {
+        value: vals,
+        fieldName: this.fullname
+      });
+    },
+    /**
+     *
+     */
+    getRules() {
+      return loadField/* default */.A.getRules(this.field);
+    },
+    updateValue(val) {
+      //met à jour la valeur de value_computed
+      this.value_select = val;
+      if (this.cardinality) {
+        const vals = [];
+        if (val && val.length) val.forEach(item => {
+          vals.push({
+            target_id: item.value
+          });
+        });
+        this.setValue(vals);
+      } else {
+        const vals = [];
+        if (val && val.value) vals.push({
+          target_id: val.value
+        });
+        this.setValue(vals);
+      }
     }
   }
 });
-;// CONCATENATED MODULE: ../components_bootstrapvuejs/src/components/Ressouces/OptionsEntities.vue?vue&type=script&lang=js
- /* harmony default export */ var Ressouces_OptionsEntitiesvue_type_script_lang_js = (OptionsEntitiesvue_type_script_lang_js); 
+;// CONCATENATED MODULE: ../components_bootstrapvuejs/src/components/Ressouces/MultiSelectEntities.vue?vue&type=script&lang=js
+ /* harmony default export */ var Ressouces_MultiSelectEntitiesvue_type_script_lang_js = (MultiSelectEntitiesvue_type_script_lang_js); 
 // EXTERNAL MODULE: ./node_modules/@vue/vue-loader-v15/lib/runtime/componentNormalizer.js
 var componentNormalizer = __webpack_require__(1656);
-;// CONCATENATED MODULE: ../components_bootstrapvuejs/src/components/Ressouces/OptionsEntities.vue
+;// CONCATENATED MODULE: ../components_bootstrapvuejs/src/components/Ressouces/MultiSelectEntities.vue
 
 
 
@@ -146,7 +353,7 @@ var componentNormalizer = __webpack_require__(1656);
 /* normalize component */
 ;
 var component = (0,componentNormalizer/* default */.A)(
-  Ressouces_OptionsEntitiesvue_type_script_lang_js,
+  Ressouces_MultiSelectEntitiesvue_type_script_lang_js,
   render,
   staticRenderFns,
   false,
@@ -156,7 +363,7 @@ var component = (0,componentNormalizer/* default */.A)(
   
 )
 
-/* harmony default export */ var OptionsEntities = (component.exports);
+/* harmony default export */ var MultiSelectEntities = (component.exports);
 
 /***/ }),
 
@@ -334,6 +541,7 @@ class itemsEntity {
     for (const i in this.items.data) {
       const term = this.items.data[i];
       if (this.entity_type_id == "user") {
+        console.log("termUser : ", term);
         if (term.attributes.drupal_internal__uid) options.push({
           text: term.attributes.name ? term.attributes.name : term.attributes.display_name,
           value: term.attributes.drupal_internal__uid
@@ -404,4 +612,4 @@ class itemsEntity {
 /***/ })
 
 }]);
-//# sourceMappingURL=EditEntity.umd.950.js.map
+//# sourceMappingURL=EditEntity.umd.120.js.map
