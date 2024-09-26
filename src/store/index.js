@@ -52,6 +52,32 @@ export default new Vuex.Store({
       state.currentEntityInfo = payload;
     },
     SET_CURRENT_ENTITY_FORM(state, payload) {
+      /**
+       *
+       * On supprime de entities les champ qui utilisent les champs
+       * qui utilisent les formateurs dans listés dans le tableau multiselect
+       * car ces formateur permettent juste d'ajouter et de potentiellement créer
+       * des entités mais ne fournissent pas un formulaire de modification.
+       * ce qui entraine une surcharge des valeurs ayant été renseigné par l'utilisateur
+       * par les valeurs par défaut de entities(qui n'ont elles pas été modifiées)
+       *
+       */
+      const multiselect = [
+        "entity_reference",
+        "select2_entity_reference",
+        "entity_reference_autocomplete",
+        "entity_reference_autocomplete_tags",
+      ];
+      /**
+       * @type {Object[]}
+       */
+      const form = payload[0].form_sort;
+      form.forEach((field) => {
+        if (multiselect.includes(field.type)) {
+          delete payload[0].entities[field.name];
+        }
+      });
+
       state.currentEntityForm = payload;
     },
     ACTIVE_RUNNING(state) {
