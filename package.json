@@ -20,7 +20,7 @@
     "vue-router": "^3.5.1",
     "vue2-transitions": "^0.3.0",
     "vuex": "^3.6.2",
-    "wbuutilities": "file:../wbuutilities"
+    "wbuutilities": "github:stephane888/wbuutilities#1x"
   },
   "devDependencies": {
     "@babel/core": "^7.12.16",
